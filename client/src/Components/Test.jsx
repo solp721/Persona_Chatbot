@@ -21,7 +21,7 @@ function Test() {
     setUserInput('');
     setIsSending(true); 
     setChat([...chat, { text: 'You: ' + message, sender: 'you' }]);
-
+    console.log(message);
     setTimeout(() => {
       setIsTyping(true);
     }, 1000);
@@ -32,6 +32,7 @@ function Test() {
         setIsSending(false);  
         const replies = response.data.map(msg => ({ text: 'Bot: ' + msg.text, sender: 'bot' }));
         setChat(currentChat => [...currentChat, ...replies]);
+        console.log(replies);
       })
       .catch(error => {
         setIsTyping(false);
