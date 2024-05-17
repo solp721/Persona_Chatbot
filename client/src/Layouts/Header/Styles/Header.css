@@ -1,0 +1,55 @@
+.headerWrap {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.leftWrap {
+  width: 18%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1%;
+}
+
+.rightWrap {
+  width: 50%;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toggleSwitch {
+  width: 50px;
+  height: 25px;
+  background-color: grey;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleSwitch.toggled {
+  background-color: blue;
+}
+
+.toggleCircle {
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.toggleSwitch.toggled .toggleCircle {
+  transform: translateX(25px);
+}

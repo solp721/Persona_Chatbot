@@ -1,15 +1,20 @@
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import Test from './Components/Test';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Test from "./Components/Test";
+import RootLayout from "./Layouts/RootLayout/RootLayout";
+import Main from "./Pages/Main/MainPage";
 
 function App() {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Test/>}></Route> 
+          <Route element={<RootLayout />}>
+            <Route path="/" element={<Main />} />
+            <Route path="/test" element={<Test />} />
+          </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
