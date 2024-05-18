@@ -14,7 +14,7 @@ export default function Header() {
     <div className="headerWrap">
       <div className="leftWrap">
         <img src={DsuLogo} alt="dsu" width={80} />
-        <img src={UbseLogo} alt="ubse" width={170} height={50} />
+        <img src={UbseLogo} alt="ubse" width={180} height={55} />
       </div>
       <div className="rightWrap">
         <div

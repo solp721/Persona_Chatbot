@@ -1,0 +1,36 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f8fd;
+  margin-bottom: 5%;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mainTitle {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 70%;
+  text-align: center;
+  color: #2a60ff;
+}
+
+.subTitle {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 60%;
+  flex-direction: column;
+  text-align: center;
+}
