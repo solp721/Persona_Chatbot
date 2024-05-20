@@ -5,6 +5,7 @@
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 1;
 }
 
 .leftWrap {

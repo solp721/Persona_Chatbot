@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap");
+
 .mainContainer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -7,6 +10,33 @@
   height: 100%;
   background-color: #f9f8fd;
   margin-bottom: 5%;
+  z-index: 50;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  letter-spacing: 3.5px;
+}
+
+.mainContainer::before,
+.mainContainer::after {
+  margin-top: 5%;
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 118%;
+  background-color: #2a60ff;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-55%);
+  z-index: 1;
+}
+
+.mainContainer::before {
+  left: -25%;
+}
+
+.mainContainer::after {
+  right: -25%;
 }
 
 .titleContainer {
@@ -15,6 +45,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin-top: 5%;
 }
 
 .mainTitle {
@@ -33,4 +64,84 @@
   width: 60%;
   flex-direction: column;
   text-align: center;
+  color: #17171b;
+}
+
+.footerContainer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: 5%;
+  z-index: 99;
+  color: #17171b;
+}
+
+.hoverContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.hoverBtn {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hoverBtn:hover {
+  background-color: #0056b3;
+}
+
+.robot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 100px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 99;
+}
+
+.leftRobot {
+  left: -12.2%;
+}
+
+.rightRobot {
+  right: -4.2%;
+}
+
+.robot.show {
+  opacity: 1;
+}
+
+.robot.leftRobot.show {
+  transform: translateY(-70%) translateX(170px);
+}
+
+.robot.rightRobot.show {
+  transform: translateY(-70%) translateX(-250px);
+}
+
+.robotImg1 {
+  transform: rotate(45deg);
+  transition: ease-in-out 3s;
+  z-index: 99;
+}
+
+.robotImg2 {
+  transform: rotate(-45deg);
+  transition: ease-in-out 3s;
+  z-index: 99;
 }
