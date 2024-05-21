@@ -1,0 +1,38 @@
+.settingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 1%;
+  height: 90%;
+  background-color: blue;
+  row-gap: 5%;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 30%;
+  background-color: orange;
+}
+
+.setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+  background-color: beige;
+}
+
+.settingBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 5%;
+  background-color: brown;
+}

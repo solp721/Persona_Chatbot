@@ -1,0 +1,11 @@
+.footerContainer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: 5%;
+  z-index: 99;
+  color: #17171b;
+}

@@ -1,95 +1,94 @@
-.chatContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.chatsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .chatbox {
-    width: 100%;
-    max-width: 600px;
-    height: 800px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    overflow-y: auto;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: 800px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .message {
-    max-width: 70%;
-    padding: 10px;
-    border-radius: 18px;
-    margin-bottom: 5px;
-    position: relative;
-    color: #fff;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 18px;
+  margin-bottom: 5px;
+  position: relative;
+  color: #fff;
 }
 
 .message.you {
-    margin-left: auto;
-    background-color: #007bff;
-    align-self: flex-end;
+  margin-left: auto;
+  background-color: #007bff;
+  align-self: flex-end;
 }
 
 .message.bot {
-    background-color: #eee;
-    color: #333;
-    align-self: flex-start;
+  background-color: #eee;
+  color: #333;
+  align-self: flex-start;
 }
 
 .userInput {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
 .sendButton {
-    padding: 5px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    width: 20%;
-    max-width: 70px;
+  padding: 5px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 20%;
+  max-width: 70px;
 }
 
 .sendButton:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
-.inputbox{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
+.inputbox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 .typing {
-    color: #666;
-    font-style: italic;
-  }
+  color: #666;
+  font-style: italic;
+}
 
-  @keyframes typing {
-    0%, 100% {
-      content: '...';
-    }
-    33% {
-      content: '.';
-    }
-    66% {
-      content: '..';
-    }
+@keyframes typing {
+  0%,
+  100% {
+    content: "...";
   }
-  
-  .typing::after {
-    content: '';
-    animation: typing 1.5s steps(1, end) infinite;
+  33% {
+    content: ".";
   }
-  
-  
+  66% {
+    content: "..";
+  }
+}
+
+.typing::after {
+  content: "";
+  animation: typing 1.5s steps(1, end) infinite;
+}

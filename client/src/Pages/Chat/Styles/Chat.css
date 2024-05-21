@@ -1,0 +1,17 @@
+.mainChatContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+
+.chatContainer {
+  display: flex;
+  flex: 2;
+  margin: 1%;
+  height: 90%;
+  background-color: rgb(39, 37, 37);
+}

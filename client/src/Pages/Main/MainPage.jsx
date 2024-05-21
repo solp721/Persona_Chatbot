@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import Header from "../../Layouts/Header/Header";
+import Footer from "../../Layouts/Footer/Footer";
 import Background1 from "../../Assets/Images/background1.png";
 import Background2 from "../../Assets/Images/background2.png";
 import "../Main/Styles/Main.css";
@@ -9,7 +10,6 @@ import "../Main/Styles/Main.css";
 const TITLE = "대화법 개선을 위한 페르소나 기반 대화 시뮬레이션 시스템";
 const SUBTITLE =
   "Persona-based Conversation Simulation System for Improving Conversation Skills";
-const AUTHOR = "20191585 정규환";
 
 const Robot1 = React.memo(({ src, alt, isHovered, position }) => (
   <div className={classNames("robot", position, { show: isHovered })}>
@@ -61,9 +61,7 @@ export default function MainPage() {
             </button>
           </div>
         </div>
-        <div className="footerContainer">
-          <h1>{AUTHOR}</h1>
-        </div>
+        <Footer />
         <div className="hoverContainer">
           <Robot1
             src={Background1}
