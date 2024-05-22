@@ -1,22 +1,13 @@
-.chatsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .chatbox {
   width: 100%;
-  max-width: 600px;
-  height: 800px;
   border: 1px solid #ccc;
   padding: 10px;
   overflow-y: auto;
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  height: 90%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .message {

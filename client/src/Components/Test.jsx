@@ -52,7 +52,7 @@ function Test() {
   };
 
   return (
-    <div className="chatsContainer">
+    <>
       <div className="chatbox">
         {chat.map((msg, index) => (
           <div key={index} className={`message ${msg.sender}`}>
@@ -79,7 +79,7 @@ function Test() {
           보내기
         </button>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -36,7 +36,7 @@ export default function MainPage() {
   }, []);
 
   const handleButtonClick = useCallback(() => {
-    navigate("/test");
+    navigate("/chat");
   }, [navigate]);
 
   return (
