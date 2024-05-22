@@ -10,11 +10,9 @@ import "./Styles/Chat.css";
 export default function ChatPage() {
   const userSettings = {
     title: "사용자 설정",
-    profileTitle: "머리",
+    profileTitle: "사용자",
     settingTitle: "설정",
     buttonText: "버튼1",
-    name: "사용자 이름",
-    gender: "남성",
   };
 
   const personaSettings = {
@@ -22,19 +20,17 @@ export default function ChatPage() {
     profileTitle: "페르소나",
     settingTitle: "설정",
     buttonText: "버튼1",
-    name: "사용자 이름",
-    gender: "남성",
   };
 
   return (
     <>
       <Header />
       <div className="mainChatContainer">
-        <UserContainer userSettings={userSettings} />
+        <PersonaContainer personaSettings={personaSettings} />
         <div className="chatContainer">
           <Test />
         </div>
-        <PersonaContainer personaSettings={personaSettings} />
+        <UserContainer userSettings={userSettings} />
       </div>
     </>
   );
