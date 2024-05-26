@@ -1,5 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap");
 
+.settingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 1%;
+  height: 90%;
+  row-gap: 5%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  height: 30%;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+  position: relative;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.settingBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 5%;
+}
+
+.addBtn {
+  width: 100%;
+  height: 100%;
+}
+
 .modal {
   position: absolute;
   top: 50%;
