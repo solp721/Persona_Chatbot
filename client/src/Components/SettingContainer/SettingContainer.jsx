@@ -5,6 +5,7 @@ import "./Styles/SettingContainer.css";
 export const UserContainer = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [profileImage, setProfileImage] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
@@ -18,6 +19,11 @@ export const UserContainer = () => {
     reader.readAsDataURL(file);
   };
 
+  const handleUserInfoSubmit = (info) => {
+    setUserInfo(info);
+    closeModal();
+  };
+
   return (
     <div className="settingContainer">
       <div className="profile">
@@ -28,9 +34,38 @@ export const UserContainer = () => {
         )}
       </div>
       <div className="setting">
-        <button className="addBtn" onClick={openModal}></button>
+        {userInfo ? (
+          <div className="userInfoDisplay">
+            <h3>사용자님의 정보입니다.</h3>
+            <p>
+              <strong>이름:</strong> {userInfo.name}
+            </p>
+            <p>
+              <strong>나이:</strong> {userInfo.age}
+            </p>
+            <p>
+              <strong>성별:</strong> {userInfo.gender}
+            </p>
+            <p>
+              <strong>사용자와 페르소나의 관계:</strong> {userInfo.relationship}
+            </p>
+            <p>
+              <strong>현재 문제 상황:</strong> {userInfo.currentIssue}
+            </p>
+            <p>
+              <strong>현재 문제 상황에 대해 느끼는 감정:</strong>{" "}
+              {userInfo.feelings}
+            </p>
+          </div>
+        ) : (
+          <button className="addBtn" onClick={openModal}></button>
+        )}
       </div>
-      <UserModal isOpen={modalIsOpen} onRequestClose={closeModal} />
+      <UserModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        onSubmit={handleUserInfoSubmit}
+      />
     </div>
   );
 };
@@ -38,6 +73,7 @@ export const UserContainer = () => {
 export const PersonaContainer = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [profileImage, setProfileImage] = useState(null);
+  const [personaInfo, setPersonaInfo] = useState(null);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
@@ -51,6 +87,11 @@ export const PersonaContainer = () => {
     reader.readAsDataURL(file);
   };
 
+  const handlePersonaInfoSubmit = (info) => {
+    setPersonaInfo(info);
+    closeModal();
+  };
+
   return (
     <div className="settingContainer">
       <div className="profile">
@@ -61,9 +102,34 @@ export const PersonaContainer = () => {
         )}
       </div>
       <div className="setting">
-        <button className="addBtn" onClick={openModal}></button>
+        {personaInfo ? (
+          <div className="personaInfoDisplay">
+            <h3>페르소나의 정보입니다.</h3>
+            <p>
+              <strong>이름:</strong> {personaInfo.name}
+            </p>
+            <p>
+              <strong>나이:</strong> {personaInfo.age}
+            </p>
+            <p>
+              <strong>성별:</strong> {personaInfo.gender}
+            </p>
+            <p>
+              <strong>성격:</strong> {personaInfo.personality}
+            </p>
+            <p>
+              <strong>나와 대화할 때 스타일:</strong> {personaInfo.style}
+            </p>
+          </div>
+        ) : (
+          <button className="addBtn" onClick={openModal}></button>
+        )}
       </div>
-      <PersonaModal isOpen={modalIsOpen} onRequestClose={closeModal} />
+      <PersonaModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        onSubmit={handlePersonaInfoSubmit}
+      />
     </div>
   );
 };

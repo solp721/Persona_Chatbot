@@ -4,7 +4,7 @@ import "./Styles/Modal.css";
 
 Modal.setAppElement("#root");
 
-export const UserModal = ({ isOpen, onRequestClose }) => {
+export const UserModal = ({ isOpen, onRequestClose, onSubmit }) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
@@ -22,8 +22,7 @@ export const UserModal = ({ isOpen, onRequestClose }) => {
       currentIssue,
       feelings,
     };
-    console.log("일단 사용자 정보: ", userInfo);
-    onRequestClose();
+    onSubmit(userInfo);
   };
 
   return (
@@ -116,7 +115,7 @@ export const UserModal = ({ isOpen, onRequestClose }) => {
   );
 };
 
-export const PersonaModal = ({ isOpen, onRequestClose }) => {
+export const PersonaModal = ({ isOpen, onRequestClose, onSubmit }) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
@@ -132,8 +131,7 @@ export const PersonaModal = ({ isOpen, onRequestClose }) => {
       personality,
       style,
     };
-    console.log("일단 페르소나 정보:", personaInfo);
-    onRequestClose();
+    onSubmit(personaInfo);
   };
 
   return (
