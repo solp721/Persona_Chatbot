@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import "./css/Test.css";
+import "./Styles/PersonaChat.css";
 
-function Test() {
+export default function PersonaChat({ userInfo, personaInfo }) {
   const [userInput, setUserInput] = useState("");
   const [chat, setChat] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
@@ -15,7 +15,7 @@ function Test() {
     }
   }, [chat]);
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (!userInput.trim() || isSending) return;
     const message = userInput;
     setUserInput("");
@@ -24,25 +24,23 @@ function Test() {
     console.log(message);
     setTimeout(() => {
       setIsTyping(true);
-    }, 1000);
+    }, 1500);
 
-    axios
-      .post("/send", { message: message })
-      .then((response) => {
-        setIsTyping(false);
-        setIsSending(false);
-        const replies = response.data.map((msg) => ({
-          text: "Bot: " + msg.text,
-          sender: "bot",
-        }));
-        setChat((currentChat) => [...currentChat, ...replies]);
-        console.log(replies);
-      })
-      .catch((error) => {
-        setIsTyping(false);
-        setIsSending(false);
-        console.error("Error sending message:", error);
-      });
+    try {
+      const response = await axios.post("/send", { message });
+      setIsTyping(false);
+      setIsSending(false);
+      const replies = response.data.map((msg) => ({
+        text: "Bot: " + msg.text,
+        sender: "bot",
+      }));
+      setChat((currentChat) => [...currentChat, ...replies]);
+      console.log(replies);
+    } catch (error) {
+      setIsTyping(false);
+      setIsSending(false);
+      console.error("Error sending message:", error);
+    }
   };
 
   const handleKeyDown = (e) => {
@@ -50,6 +48,8 @@ function Test() {
       sendMessage();
     }
   };
+
+  const isDisabled = !userInfo || !personaInfo;
 
   return (
     <>
@@ -69,12 +69,12 @@ function Test() {
           onChange={(e) => setUserInput(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="입력하기..."
-          disabled={isSending}
+          disabled={isDisabled || isSending}
         />
         <button
           className="sendButton"
           onClick={sendMessage}
-          disabled={isSending}
+          disabled={isDisabled || isSending}
         >
           보내기
         </button>
@@ -82,5 +82,3 @@ function Test() {
     </>
   );
 }
-
-export default Test;
