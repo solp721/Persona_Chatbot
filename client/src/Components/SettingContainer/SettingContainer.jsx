@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { UserModal, PersonaModal } from "../SettingModal/SettingModal.jsx";
 import "./Styles/SettingContainer.css";
 
-export const UserContainer = () => {
+export const UserContainer = ({ setUserInfo }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [profileImage, setProfileImage] = useState(null);
-  const [userInfo, setUserInfo] = useState(null);
+  const [userInfo, setLocalUserInfo] = useState(null);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
@@ -20,6 +20,7 @@ export const UserContainer = () => {
   };
 
   const handleUserInfoSubmit = (info) => {
+    setLocalUserInfo(info);
     setUserInfo(info);
     closeModal();
   };
@@ -70,10 +71,10 @@ export const UserContainer = () => {
   );
 };
 
-export const PersonaContainer = () => {
+export const PersonaContainer = ({ setPersonaInfo }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [profileImage, setProfileImage] = useState(null);
-  const [personaInfo, setPersonaInfo] = useState(null);
+  const [personaInfo, setLocalPersonaInfo] = useState(null);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
@@ -88,6 +89,7 @@ export const PersonaContainer = () => {
   };
 
   const handlePersonaInfoSubmit = (info) => {
+    setLocalPersonaInfo(info);
     setPersonaInfo(info);
     closeModal();
   };
