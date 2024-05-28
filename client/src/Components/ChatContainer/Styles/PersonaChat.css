@@ -88,3 +88,30 @@
   content: "";
   animation: typing 1.5s steps(1, end) infinite;
 }
+
+.tutorialContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5%;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin-top: 20%;
+}
+
+.tutorialContainer h1 {
+  color: #2a60ff;
+  margin-bottom: 20px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.tutorialContainer h3 {
+  color: #17171b;
+  margin-bottom: 15px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
