@@ -15,19 +15,19 @@ pipeline:
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
+  # - name: CountVectorsFeaturizer  # 중복된 컴포넌트를 제거
+  #   analyzer: char_wb
+  #   min_ngram: 1
+  #   max_ngram: 4
   - name: DIETClassifier
     epochs: 2
-    constrain_similarities: true
-    batch_size: [8, 16]
+    constrain_similarities: false # 메모리 사용량을 줄이기 위해 false로 설정
+    batch_size: [4, 8] # 배치 크기 줄이기
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 2
-    constrain_similarities: true
-    batch_size: [8, 16]
+    constrain_similarities: false # 메모리 사용량을 줄이기 위해 false로 설정
+    batch_size: [4, 8] # 배치 크기 줄이기
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
@@ -40,9 +40,9 @@ policies:
   - name: UnexpecTEDIntentPolicy
     max_history: 5
     epochs: 2
-    batch_size: [8, 16]
+    batch_size: [4, 8] # 배치 크기 줄이기
   - name: TEDPolicy
     max_history: 5
     epochs: 2
-    constrain_similarities: true
-    batch_size: [8, 16]
+    constrain_similarities: false # 메모리 사용량을 줄이기 위해 false로 설정
+    batch_size: [4, 8] # 배치 크기 줄이기
