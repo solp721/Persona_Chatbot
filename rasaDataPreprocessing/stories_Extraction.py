@@ -1,8 +1,9 @@
 import json
+import os
 
 # 파일 경로
-input_path = "C:/Users/NM333-83/Desktop/merged_data.json"
-output_path = "C:/Users/NM333-83/Desktop/stories.yml"
+input_path = "C:/Users/NM333-83/Desktop/new_merged_data.json"
+output_path = os.path.join(os.path.expanduser('~'), 'Desktop', 'stories.yml')
 
 # JSON 파일 읽기
 with open(input_path, 'r', encoding='utf-8') as f:
@@ -53,4 +54,4 @@ for story in stories:
 with open(output_path, 'w', encoding='utf-8') as f:
     f.write(output)
 
-print("stories.yml 파일이 성공적으로 생성되었습니다.")
+print("stories.yml 파일이 성공적으로 생성되었습니다. 위치:", output_path)
