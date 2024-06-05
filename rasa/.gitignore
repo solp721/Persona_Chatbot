@@ -1,2 +1,5 @@
 # Ignore data folder
 data/
+
+# Ignore domain.yml file
+domain.yml
