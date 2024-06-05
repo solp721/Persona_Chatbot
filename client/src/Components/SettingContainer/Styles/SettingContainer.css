@@ -33,6 +33,40 @@
   object-fit: cover;
 }
 
+/* 파일 선택 버튼과 파일 없음을 표시하는 스타일 추가 */
+.fileUploadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.fileUploadMessage {
+  font-family: "Jua", sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.fileUploadBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #2a60ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fileUploadBtn:hover {
+  background-color: #1a4ccc;
+}
+
 .setting {
   display: flex;
   justify-content: center;
@@ -144,4 +178,8 @@
   100% {
     transform: translate(0.5px, -1px) rotate(-0.5deg);
   }
+}
+
+small {
+  color: gray;
 }

@@ -31,7 +31,18 @@ export const UserContainer = ({ setUserInfo }) => {
         {profileImage ? (
           <img src={profileImage} alt="Profile" className="profileImage" />
         ) : (
-          <input type="file" accept="image/*" onChange={handleImageUpload} />
+          <div className="fileUploadContainer">
+            <p className="fileUploadMessage">선택된 사진 없음</p>
+            <label className="fileUploadBtn">
+              사진 선택
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                style={{ display: "none" }}
+              />
+            </label>
+          </div>
         )}
       </div>
       <div className="setting">
@@ -59,7 +70,9 @@ export const UserContainer = ({ setUserInfo }) => {
             </p>
           </div>
         ) : (
-          <button className="addBtn" onClick={openModal}></button>
+          <button className="addBtn" onClick={openModal}>
+            정보 추가
+          </button>
         )}
       </div>
       <UserModal
@@ -100,7 +113,18 @@ export const PersonaContainer = ({ setPersonaInfo }) => {
         {profileImage ? (
           <img src={profileImage} alt="Profile" className="profileImage" />
         ) : (
-          <input type="file" accept="image/*" onChange={handleImageUpload} />
+          <div className="fileUploadContainer">
+            <p className="fileUploadMessage">선택된 사진 없음</p>
+            <label className="fileUploadBtn">
+              사진 선택
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                style={{ display: "none" }}
+              />
+            </label>
+          </div>
         )}
       </div>
       <div className="setting">
@@ -124,7 +148,9 @@ export const PersonaContainer = ({ setPersonaInfo }) => {
             </p>
           </div>
         ) : (
-          <button className="addBtn" onClick={openModal}></button>
+          <button className="addBtn" onClick={openModal}>
+            정보 추가
+          </button>
         )}
       </div>
       <PersonaModal
