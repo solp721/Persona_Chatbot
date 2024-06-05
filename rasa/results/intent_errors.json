@@ -1,0 +1,426 @@
+[
+  {
+    "text": "공무원 시험에 두 문제 차이로 떨어졌다.",
+    "intent": "situation_BE22000009",
+    "intent_prediction": {
+      "name": "BE22000009.7",
+      "confidence": 0.17512309551239014
+    }
+  },
+  {
+    "text": "칫솔도 없는데 이 사이에 낀 고춧가루가 안 빠진다.",
+    "intent": "situation_BE22000064",
+    "intent_prediction": {
+      "name": "BE22000009.3",
+      "confidence": 0.06604031473398209
+    }
+  },
+  {
+    "text": "내 잠꼬대 소리에 내가 잠에서 깼다.",
+    "intent": "situation_BE22000051",
+    "intent_prediction": {
+      "name": "BE22000344.7",
+      "confidence": 0.09979334473609924
+    }
+  },
+  {
+    "text": "자기야 나 오늘 진짜 피곤한 날이었어.",
+    "intent": "BE22000051.1",
+    "intent_prediction": {
+      "name": "BE22000344.1",
+      "confidence": 0.10512533038854599
+    }
+  },
+  {
+    "text": "그럴까? 도대체 뭐라고 말하는지 나도 좀 알아야 걱정 없이 자겠어.",
+    "intent": "BE22000051.13",
+    "intent_prediction": {
+      "name": "BE22000051.7",
+      "confidence": 0.0573042593896389
+    }
+  },
+  {
+    "text": "사랑을 고백했는데 아무 말이 없다.",
+    "intent": "situation_BE22000106",
+    "intent_prediction": {
+      "name": "BE22000005.7",
+      "confidence": 0.12187430262565613
+    }
+  },
+  {
+    "text": "형님, 어제 모임 끝나고 집에 갈 때 총무한테 고백했어요.",
+    "intent": "BE22000106.1",
+    "intent_prediction": {
+      "name": "BE22000058.1",
+      "confidence": 0.185489684343338
+    }
+  },
+  {
+    "text": "눈치채고 계셨군요. 근데 지금 생각하니 괜히 말했나 후회가 돼요.",
+    "intent": "BE22000106.3",
+    "intent_prediction": {
+      "name": "BE22000091.3",
+      "confidence": 0.07464273273944855
+    }
+  },
+  {
+    "text": "그렇지요. 제가 주제 파악을 못 했어요. 못 오를 나무는 쳐다보지 말아야 하는데 말이에요.",
+    "intent": "BE22000106.9",
+    "intent_prediction": {
+      "name": "BE22000015.9",
+      "confidence": 0.2048122137784958
+    }
+  },
+  {
+    "text": "친구가 폐가를 사서 수리했다고 자랑하고 다닌다.",
+    "intent": "situation_BE22000018",
+    "intent_prediction": {
+      "name": "situation_BE22000054",
+      "confidence": 0.06959116458892822
+    }
+  },
+  {
+    "text": "분명 축하할 일이 맞는데 마음속 한편에서는 뭔가 복합적인 감정이 막 뒤섞이고 있어.",
+    "intent": "BE22000018.3",
+    "intent_prediction": {
+      "name": "BE22000146.3",
+      "confidence": 0.12809112668037415
+    }
+  },
+  {
+    "text": "그 친구는 나보다 가난한 집에서 태어나 거칠게 자라왔지만 매사에 항상 의욕적이었어.",
+    "intent": "BE22000018.5",
+    "intent_prediction": {
+      "name": "BE22000015.5",
+      "confidence": 0.20240390300750732
+    }
+  },
+  {
+    "text": "의욕적이고 진취적인 그런 친구가 있는 반면 나는 뭐란 말이야. 직장 생활에만 안주해 하루하루를 무의미하게 보내고 있으니...",
+    "intent": "BE22000018.11",
+    "intent_prediction": {
+      "name": "BE22000011.11",
+      "confidence": 0.1417536586523056
+    }
+  },
+  {
+    "text": "네 말을 들으니 내가 뭐 대단한 인물인 거 같다. 주변에 너 같은 사람이 있는 걸 보면 나도 괜찮은 사람이라는 생각이 들어.",
+    "intent": "BE22000018.15",
+    "intent_prediction": {
+      "name": "BE22000058.15",
+      "confidence": 0.10589234530925751
+    }
+  },
+  {
+    "text": "수업시간에 잠이 온다.",
+    "intent": "situation_BE22000743",
+    "intent_prediction": {
+      "name": "BE22000009.7",
+      "confidence": 0.05275322124361992
+    }
+  },
+  {
+    "text": "뛰어서 지하철을 탔는데 문에 끼어 버렸다.",
+    "intent": "situation_BE22000090",
+    "intent_prediction": {
+      "name": "BE22000030.7",
+      "confidence": 0.14509159326553345
+    }
+  },
+  {
+    "text": "꽉 끼어 있는데 사람들이 다들 나만 쳐다보는 것 같아 창피해서 고개를 못 들겠더라고.",
+    "intent": "BE22000090.9",
+    "intent_prediction": {
+      "name": "BE22000090.1",
+      "confidence": 0.18438880145549774
+    }
+  },
+  {
+    "text": "선물 받은 샤넬 귀걸이가 보이지 않는다.",
+    "intent": "situation_BE22000028",
+    "intent_prediction": {
+      "name": "BE22000035.7",
+      "confidence": 0.13572810590267181
+    }
+  },
+  {
+    "text": "장을 봐다가 저녁준비를 해놨는데 아무도 집에 들어오지 않는다.",
+    "intent": "situation_BE22000015",
+    "intent_prediction": {
+      "name": "situation_BE22000068",
+      "confidence": 0.07018368691205978
+    }
+  },
+  {
+    "text": "오늘 늦네요? 늦으면 늦는다고 말을 좀 해주지 그랬어요. 별말 없길래 항상 저녁 먹는 시간에 밥 다 차려놨는데.",
+    "intent": "BE22000015.3",
+    "intent_prediction": {
+      "name": "BE22000009.3",
+      "confidence": 0.08028895407915115
+    }
+  },
+  {
+    "text": "미세먼지 때문에 공기청정기를 구입했다.",
+    "intent": "situation_BE22000033",
+    "intent_prediction": {
+      "name": "BE22000030.3",
+      "confidence": 0.06243959069252014
+    }
+  },
+  {
+    "text": "그러니까. 가뜩이나 지갑이 빈곤한 상태인데... 너무 곤란하게 됐어.",
+    "intent": "BE22000033.7",
+    "intent_prediction": {
+      "name": "BE22000146.7",
+      "confidence": 0.13562512397766113
+    }
+  },
+  {
+    "text": "맞아. 그래서 요즘 너무 짜증 나. 공기는 공기대로 안 좋고, 돈은 돈대로 낭비하고. 미세먼지 너무 싫어!",
+    "intent": "BE22000033.9",
+    "intent_prediction": {
+      "name": "BE22000001.9",
+      "confidence": 0.1358969658613205
+    }
+  },
+  {
+    "text": "그래. 자기 말도 맞는 거 같아. 이미 내 통장을 떠난 돈인데 내가 너무 짜증만 냈네. 여보가 내 감정을 받아줘서 이제 좀 기분이 풀려!",
+    "intent": "BE22000033.13",
+    "intent_prediction": {
+      "name": "BE22000090.13",
+      "confidence": 0.08138106763362885
+    }
+  },
+  {
+    "text": "그것뿐이 아니에요, 내일 검색해도 될 것을 지금 하라고 하셨어요.",
+    "intent": "BE22000001.7",
+    "intent_prediction": {
+      "name": "BE22000040.17",
+      "confidence": 0.09939302504062653
+    }
+  },
+  {
+    "text": "내가 학교 다닐 때 가장 최악인 친구였. 내 짝 이였을 때도 내 물건 마음대로 쓰고, 욕도 심하게 해서 저급해서 상대하기가 힘들었어.",
+    "intent": "BE22000072.5",
+    "intent_prediction": {
+      "name": "BE22000106.5",
+      "confidence": 0.044448040425777435
+    }
+  },
+  {
+    "text": "집안 일이 밀렸다.",
+    "intent": "situation_BE22000005",
+    "intent_prediction": {
+      "name": "BE22000007.7",
+      "confidence": 0.08451733738183975
+    }
+  },
+  {
+    "text": "네. 평소 달리기에 자신이 있었거든요. 근데 이번에는 입상도 하지 못했어요.",
+    "intent": "BE22000027.3",
+    "intent_prediction": {
+      "name": "BE22000146.3",
+      "confidence": 0.23604631423950195
+    }
+  },
+  {
+    "text": "네. 저는 제가 1등 할 거라고 당연하게 믿고 있었거든요. 자만했던 제가 한심해요.",
+    "intent": "BE22000027.7",
+    "intent_prediction": {
+      "name": "BE22000146.7",
+      "confidence": 0.19807769358158112
+    }
+  },
+  {
+    "text": "조급해 하지 않고 꾸준하게 노력하는 것이 중요하단 말씀이군요. 제가 너무 꿈에 대해 성급했던 것 같아요.",
+    "intent": "BE22000027.13",
+    "intent_prediction": {
+      "name": "BE22000015.13",
+      "confidence": 0.14475195109844208
+    }
+  },
+  {
+    "text": "고마워요. 아빠. 저를 믿고 더 열심히 노력할게요.",
+    "intent": "BE22000027.15",
+    "intent_prediction": {
+      "name": "BE22000058.15",
+      "confidence": 0.08184421807527542
+    }
+  },
+  {
+    "text": "털 알레르기가 있는데 아들이 강아지를 사달라고 조른다.",
+    "intent": "situation_BE22000011",
+    "intent_prediction": {
+      "name": "BE22000072.15",
+      "confidence": 0.06645438075065613
+    }
+  },
+  {
+    "text": "응. 그래서 안 된다고 얘기하니까 잔뜩 풀이 죽었어. 그 모습을 보니까 마음이 아파.",
+    "intent": "BE22000011.3",
+    "intent_prediction": {
+      "name": "BE22000011.11",
+      "confidence": 0.1572829782962799
+    }
+  },
+  {
+    "text": "좋은 생각이에요. 다음부터는 구두 신고 계단으로 내려가지 않을게요. 얘기 들어주고 위로해주고 조언해줘서 너무 고마워요. 자기 덕분에 놀랐던 마음이 이제 좀 진정됐어요,.",
+    "intent": "BE22000146.11",
+    "intent_prediction": {
+      "name": "BE22000146.3",
+      "confidence": 0.2047746479511261
+    }
+  },
+  {
+    "text": "생애 첫 취미생활을 위해 댄스학원에 등록했다.",
+    "intent": "situation_BE22000099",
+    "intent_prediction": {
+      "name": "BE22000072.13",
+      "confidence": 0.06797277927398682
+    }
+  },
+  {
+    "text": "그랬지요. 그런데 참고할책이 꽤 두껍고 어렵더라고요. 같은 문장을 몇 번씩 읽고 있다니까요.",
+    "intent": "BE22000031.5",
+    "intent_prediction": {
+      "name": "BE22000009.5",
+      "confidence": 0.14474211633205414
+    }
+  },
+  {
+    "text": "집의 크기를 절반으로 줄여 이사 가기 때문에 물건을 많이 버려야 한다.",
+    "intent": "situation_BE22000020",
+    "intent_prediction": {
+      "name": "BE22000028.15",
+      "confidence": 0.06256835162639618
+    }
+  },
+  {
+    "text": "그래. 이렇게 좌절만 하고 있지 말고 마음 굳게 먹어야겠어.",
+    "intent": "BE22000020.15",
+    "intent_prediction": {
+      "name": "BE22000072.15",
+      "confidence": 0.15925268828868866
+    }
+  },
+  {
+    "text": "그런데 회사 사람들은 다 참고 버티고 있는데, 저만 이겨내지 못한 것 같아서요.",
+    "intent": "BE22000030.9",
+    "intent_prediction": {
+      "name": "BE22000030.1",
+      "confidence": 0.4262135326862335
+    }
+  },
+  {
+    "text": "그 상사를 제외하고 나머지 회사 사람들은 다 좋아서 버티고 싶었는데 그러지 못해서 아쉬워요.",
+    "intent": "BE22000030.11",
+    "intent_prediction": {
+      "name": "BE22000030.1",
+      "confidence": 0.24181710183620453
+    }
+  },
+  {
+    "text": "정말? 그럼 너무 좋지! 이제 기분 완전 풀렸어. 그럼 이따가 보자!",
+    "intent": "BE22000054.15",
+    "intent_prediction": {
+      "name": "BE22000344.15",
+      "confidence": 0.09667704254388809
+    }
+  },
+  {
+    "text": "그래야겠어요. 실은 많이 지쳐 있기도 했거든요.",
+    "intent": "BE22000034.11",
+    "intent_prediction": {
+      "name": "BE22000034.15",
+      "confidence": 0.20302602648735046
+    }
+  },
+  {
+    "text": "회장 선거에 출마했다가 떨어졌다.",
+    "intent": "situation_BE22000063",
+    "intent_prediction": {
+      "name": "BE22000064.1",
+      "confidence": 0.11712471395730972
+    }
+  },
+  {
+    "text": "어떻게 내가 회장 선거에서 떨어질 수가 있지? 친하다고 생각한 친구들에게 상처를 받은 기분이야.",
+    "intent": "BE22000063.1",
+    "intent_prediction": {
+      "name": "BE22000030.1",
+      "confidence": 0.1803043633699417
+    }
+  },
+  {
+    "text": "모르겠어, 얼마 전에 전학온 애가 갑자기 회장이 됐어.",
+    "intent": "BE22000063.3",
+    "intent_prediction": {
+      "name": "BE22000054.7",
+      "confidence": 0.10402605682611465
+    }
+  },
+  {
+    "text": "그렇겠네. 처음에는 회장 일 잘 못했으면 좋겠다는 생각을 했는데 네 이야기를 들어보니 내가 좀 도와줘야 할 것 같아.",
+    "intent": "BE22000063.13",
+    "intent_prediction": {
+      "name": "BE22000212.13",
+      "confidence": 0.20054104924201965
+    }
+  },
+  {
+    "text": "친한 친구가 다음 달에 전학을 갈 거래.",
+    "intent": "BE22000040.1",
+    "intent_prediction": {
+      "name": "BE22000068.1",
+      "confidence": 0.10988568514585495
+    }
+  },
+  {
+    "text": "둘이 항상 함께 다녔는데 이제 나 혼자야.",
+    "intent": "BE22000040.3",
+    "intent_prediction": {
+      "name": "BE22000146.3",
+      "confidence": 0.2763633131980896
+    }
+  },
+  {
+    "text": "동창이 건설회사 상무로 승진했다.",
+    "intent": "situation_BE22000058",
+    "intent_prediction": {
+      "name": "BE22000040.17",
+      "confidence": 0.11444682627916336
+    }
+  },
+  {
+    "text": "다른 사람 승진 소식 듣는 날이면 여보 얼굴 보기가 참 힘들어. 나 때문에 당신만 고생하는 것 같아서.",
+    "intent": "BE22000058.11",
+    "intent_prediction": {
+      "name": "BE22000011.11",
+      "confidence": 0.2432965487241745
+    }
+  },
+  {
+    "text": "명예 퇴직하고 자영업을 시작했는데 매출이 없어 적자만 쌓이고 있다.",
+    "intent": "situation_BE22000003",
+    "intent_prediction": {
+      "name": "BE22000344.7",
+      "confidence": 0.205113485455513
+    }
+  },
+  {
+    "text": "이력서에 쓸 내용이 없다.",
+    "intent": "situation_BE22000007",
+    "intent_prediction": {
+      "name": "BE22000028.13",
+      "confidence": 0.057764820754528046
+    }
+  },
+  {
+    "text": "젊은시절 아빠사진을 보았다.",
+    "intent": "situation_BE22000010",
+    "intent_prediction": {
+      "name": "BE22000040.19",
+      "confidence": 0.09253744035959244
+    }
+  }
+]
