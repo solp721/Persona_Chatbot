@@ -1,11 +1,11 @@
 import json
 import os
 
-# 파일 경로
-input_path = "C:/Users/NM333-83/Desktop/new_merged_data.json"
-output_path = os.path.join(os.path.expanduser('~'), 'Desktop', 'domain.yml')
 
-# JSON 파일 읽기
+input_path = "# 파일 경로"
+output_path = os.path.join(os.path.expanduser('~'), '# 출력 경로로', 'nlu.yml')
+
+
 with open(input_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
@@ -41,7 +41,7 @@ for dialogue in data:
             responses[utterance_id] = [{"text": f"{empathy_prefix}{text}"}]
             actions.append(utterance_id)
 
-# domain.yml 파일의 내용을 문자열로 생성
+
 output = f"""version: "3.1"
 
 intents:
@@ -68,7 +68,6 @@ session_config:
   carry_over_slots_to_new_session: true
 """
 
-# domain.yml 파일 저장
 with open(output_path, 'w', encoding='utf-8') as f:
     f.write(output)
 

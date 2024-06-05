@@ -1,49 +1,34 @@
 import os
 import json
 
-def collect_json_files(directory, limit=200):
-    json_files = []
-    count = 0
-    for root, _, files in os.walk(directory):
-        for file in sorted(files):
-            if file.endswith('.json'):
-                json_files.append(os.path.join(root, file))
-                count += 1
-                if count >= limit:
-                    break
-        if count >= limit:
-            break
-    return json_files
-
-def merge_json_files(json_files):
+def merge_top_1_json_file(input_paths, output_file):
     merged_data = []
-    for file in json_files:
-        with open(file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            merged_data.append(data)
-    return merged_data
 
-def save_merged_json(merged_data, output_file):
+    for input_path in input_paths:
+        for root, dirs, files in os.walk(input_path):
+            if '기쁨' in root:
+                continue  
+
+            json_files = [file for file in files if file.endswith('.json')]
+            json_files = sorted(json_files)[:1]  
+
+            for json_file in json_files:
+                file_path = os.path.join(root, json_file)
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    merged_data.append(data)
+    
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(merged_data, f, ensure_ascii=False, indent=4)
 
-def main():
-    directories = [
-        "C:/Users/NM333-83/Desktop/046.공감형 대화/01-1.정식개방데이터/Training/02.라벨링데이터",
-        "C:/Users/NM333-83/Desktop/046.공감형 대화/01-1.정식개방데이터/Validation/02.라벨링데이터"
-    ]
-    
-    json_files = []
-    for directory in directories:
-        json_files.extend(collect_json_files(directory))
-    
-    merged_data = merge_json_files(json_files)
-    
-    desktop_path = os.path.join(os.path.expanduser('~'), 'Desktop')
-    output_file = os.path.join(desktop_path, 'merged_data.json')
-    
-    save_merged_json(merged_data, output_file)
-    print(f"다음 위치에 생성 완료: {output_file}")
+    print("JSON 파일 병합이 완료되었습니다. 출력 파일:", output_file)
 
-if __name__ == "__main__":
-    main()
+
+input_paths = [
+    # 입력 경로
+]
+
+desktop_path = os.path.join(os.path.expanduser('~'), '# 출력 파일 경로 설정') 
+output_file = os.path.join(desktop_path, '# 출력 파일 경로 설정') 
+
+merge_top_1_json_file(input_paths, output_file)

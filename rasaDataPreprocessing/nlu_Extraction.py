@@ -1,17 +1,16 @@
 import json
 import os
 
-# 파일 경로
-input_path = "C:/Users/NM333-83/Desktop/new_merged_data.json"
-output_path = os.path.join(os.path.expanduser('~'), 'Desktop', 'nlu.yml')
+input_path = "# 파일 경로"
+output_path = os.path.join(os.path.expanduser('~'), '# 출력 경로로', 'nlu.yml')
 
-# JSON 파일 읽기
+
 with open(input_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 nlu_data = []
 
-# 각 대화 데이터에 대해 NLU 데이터 생성
+
 for dialogue in data:
     # 상황(intent: situation_id) 추가
     situation = dialogue['info']['situation']
@@ -31,12 +30,12 @@ for dialogue in data:
                 'examples': f'- {text}'
             })
 
-# NLU 데이터 YAML 형식으로 변환
+
+
 output = "version: \"3.1\"\n\nnlu:\n"
 for entry in nlu_data:
     output += f"\n- intent: {entry['intent']}\n  examples: |\n    {entry['examples']}\n"
 
-# YAML 파일 저장
 with open(output_path, 'w', encoding='utf-8') as f:
     f.write(output)
 
