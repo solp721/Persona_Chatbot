@@ -33,7 +33,6 @@
   object-fit: cover;
 }
 
-/* 파일 선택 버튼과 파일 없음을 표시하는 스타일 추가 */
 .fileUploadContainer {
   display: flex;
   flex-direction: column;
