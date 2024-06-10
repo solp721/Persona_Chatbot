@@ -50,23 +50,24 @@ export const UserContainer = ({ setUserInfo }) => {
           <div className="userInfoDisplay">
             <h3>사용자님의 정보입니다.</h3>
             <p>
-              <strong>이름:</strong> {userInfo.name}
+              <strong>이름:</strong> {userInfo.userName}
             </p>
             <p>
-              <strong>나이:</strong> {userInfo.age}
+              <strong>나이:</strong> {userInfo.userAge}
             </p>
             <p>
-              <strong>성별:</strong> {userInfo.gender}
+              <strong>성별:</strong> {userInfo.userGender}
             </p>
             <p>
-              <strong>사용자와 페르소나의 관계:</strong> {userInfo.relationship}
+              <strong>사용자와 페르소나의 관계:</strong>{" "}
+              {userInfo.userRelationship}
             </p>
             <p>
-              <strong>현재 문제 상황:</strong> {userInfo.currentIssue}
+              <strong>현재 문제 상황:</strong> {userInfo.userCurrentIssue}
             </p>
             <p>
               <strong>현재 문제 상황에 대해 느끼는 감정:</strong>{" "}
-              {userInfo.feelings}
+              {userInfo.userFeelings}
             </p>
           </div>
         ) : (
@@ -132,19 +133,19 @@ export const PersonaContainer = ({ setPersonaInfo }) => {
           <div className="personaInfoDisplay">
             <h3>페르소나의 정보입니다.</h3>
             <p>
-              <strong>이름:</strong> {personaInfo.name}
+              <strong>이름:</strong> {personaInfo.personaName}
             </p>
             <p>
-              <strong>나이:</strong> {personaInfo.age}
+              <strong>나이:</strong> {personaInfo.personaAge}
             </p>
             <p>
-              <strong>성별:</strong> {personaInfo.gender}
+              <strong>성별:</strong> {personaInfo.personaGender}
             </p>
             <p>
-              <strong>성격:</strong> {personaInfo.personality}
+              <strong>성격:</strong> {personaInfo.personaPersonality}
             </p>
             <p>
-              <strong>나와 대화할 때 스타일:</strong> {personaInfo.style}
+              <strong>나와 대화할 때 스타일:</strong> {personaInfo.personaStyle}
             </p>
           </div>
         ) : (
