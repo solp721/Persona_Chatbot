@@ -5,23 +5,24 @@ import "./Styles/Modal.css";
 Modal.setAppElement("#root");
 
 export const UserModal = ({ isOpen, onRequestClose, onSubmit }) => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
-  const [relationship, setRelationship] = useState("");
-  const [currentIssue, setCurrentIssue] = useState("");
-  const [feelings, setFeelings] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userAge, setUserAge] = useState("");
+  const [userGender, setUserGender] = useState("");
+  const [userRelationship, setUserRelationship] = useState("");
+  const [userCurrentIssue, setUserCurrentIssue] = useState("");
+  const [userFeelings, setUserFeelings] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const userInfo = {
-      name,
-      age,
-      gender,
-      relationship,
-      currentIssue,
-      feelings,
+      userName,
+      userAge,
+      userGender,
+      userRelationship,
+      userCurrentIssue,
+      userFeelings,
     };
+    console.log(userInfo);
     onSubmit(userInfo);
   };
 
@@ -39,65 +40,67 @@ export const UserModal = ({ isOpen, onRequestClose, onSubmit }) => {
       <h2>사용자 정보 입력</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <label htmlFor="name">이름:</label>
+          <label htmlFor="userName">이름:</label>
           <input
             type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            id="userName"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
             placeholder="이름을 입력하세요"
             required
           />
         </div>
         <div className="input-group">
-          <label htmlFor="age">나이:</label>
+          <label htmlFor="userAge">나이:</label>
           <input
             type="number"
-            id="age"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
+            id="userAge"
+            value={userAge}
+            onChange={(e) => setUserAge(e.target.value)}
             placeholder="나이를 입력하세요"
             required
           />
         </div>
         <div className="input-group">
-          <label htmlFor="gender">성별:</label>
+          <label htmlFor="userGender">성별:</label>
           <input
             type="text"
-            id="gender"
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
+            id="userGender"
+            value={userGender}
+            onChange={(e) => setUserGender(e.target.value)}
             placeholder="성별을 입력하세요"
             required
           />
         </div>
         <div className="input-group">
-          <label htmlFor="relationship">사용자와 페르소나의 관계:</label>
+          <label htmlFor="userRelationship">사용자와 페르소나의 관계:</label>
           <input
             type="text"
-            id="relationship"
-            value={relationship}
-            onChange={(e) => setRelationship(e.target.value)}
+            id="userRelationship"
+            value={userRelationship}
+            onChange={(e) => setUserRelationship(e.target.value)}
             placeholder="관계를 입력하세요"
             required
           />
         </div>
         <div className="input-group">
-          <label htmlFor="currentIssue">현재 문제 상황:</label>
+          <label htmlFor="userCurrentIssue">현재 문제 상황:</label>
           <textarea
-            id="currentIssue"
-            value={currentIssue}
-            onChange={(e) => setCurrentIssue(e.target.value)}
+            id="userCurrentIssue"
+            value={userCurrentIssue}
+            onChange={(e) => setUserCurrentIssue(e.target.value)}
             placeholder="현재 문제 상황을 입력하세요"
             required
           ></textarea>
         </div>
         <div className="input-group">
-          <label htmlFor="feelings">현재 문제 상황에 대해 느끼는 감정:</label>
+          <label htmlFor="userFeelings">
+            현재 문제 상황에 대해 느끼는 감정:
+          </label>
           <textarea
-            id="feelings"
-            value={feelings}
-            onChange={(e) => setFeelings(e.target.value)}
+            id="userFeelings"
+            value={userFeelings}
+            onChange={(e) => setUserFeelings(e.target.value)}
             placeholder="감정을 입력하세요"
             required
           ></textarea>
@@ -116,21 +119,22 @@ export const UserModal = ({ isOpen, onRequestClose, onSubmit }) => {
 };
 
 export const PersonaModal = ({ isOpen, onRequestClose, onSubmit }) => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
-  const [personality, setPersonality] = useState("");
-  const [style, setStyle] = useState("");
+  const [personaName, setPersonaName] = useState("");
+  const [personaAge, setPersonaAge] = useState("");
+  const [personaGender, setPersonaGender] = useState("");
+  const [personaPersonality, setPersonaPersonality] = useState("");
+  const [personaStyle, setPersonaStyle] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const personaInfo = {
-      name,
-      age,
-      gender,
-      personality,
-      style,
+      personaName,
+      personaAge,
+      personaGender,
+      personaPersonality,
+      personaStyle,
     };
+    console.log(personaInfo);
     onSubmit(personaInfo);
   };
 
@@ -148,54 +152,54 @@ export const PersonaModal = ({ isOpen, onRequestClose, onSubmit }) => {
       <h2>페르소나 정보 입력</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <label htmlFor="name">이름:</label>
+          <label htmlFor="personaName">이름:</label>
           <input
             type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            id="personaName"
+            value={personaName}
+            onChange={(e) => setPersonaName(e.target.value)}
             placeholder="이름을 입력하세요"
             required
           />
         </div>
         <div className="input-group">
-          <label htmlFor="age">나이:</label>
+          <label htmlFor="personaAge">나이:</label>
           <input
             type="number"
-            id="age"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
+            id="personaAge"
+            value={personaAge}
+            onChange={(e) => setPersonaAge(e.target.value)}
             placeholder="나이를 입력하세요"
             required
           />
         </div>
         <div className="input-group">
-          <label htmlFor="gender">성별:</label>
+          <label htmlFor="personaGender">성별:</label>
           <input
             type="text"
-            id="gender"
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
+            id="personaGender"
+            value={personaGender}
+            onChange={(e) => setPersonaGender(e.target.value)}
             placeholder="성별을 입력하세요"
             required
           />
         </div>
         <div className="input-group">
-          <label htmlFor="personality">성격:</label>
+          <label htmlFor="personaPersonality">성격:</label>
           <textarea
-            id="personality"
-            value={personality}
-            onChange={(e) => setPersonality(e.target.value)}
+            id="personaPersonality"
+            value={personaPersonality}
+            onChange={(e) => setPersonaPersonality(e.target.value)}
             placeholder="성격을 입력하세요"
             required
           ></textarea>
         </div>
         <div className="input-group">
-          <label htmlFor="style">나와 대화할 때 스타일:</label>
+          <label htmlFor="personaStyle">나와 대화할 때 스타일:</label>
           <textarea
-            id="style"
-            value={style}
-            onChange={(e) => setStyle(e.target.value)}
+            id="personaStyle"
+            value={personaStyle}
+            onChange={(e) => setPersonaStyle(e.target.value)}
             placeholder="대화 스타일을 입력하세요"
             required
           ></textarea>
