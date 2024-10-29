@@ -8,7 +8,7 @@ Angsook은 **페르소나 기반 대화 시뮬레이션 시스템**으로, 사�
 ---
 
 ### **📺 프로젝트 시연 영상**  
-[![Angsook Project Video]()  
+[![Angsook Project Video](https://www.youtube.com/watch?v=imoSB5ZZMYY)  
 **[YouTube에서 보기](https://www.youtube.com/watch?v=4sGoxlzFsAo)**
 
 ---
