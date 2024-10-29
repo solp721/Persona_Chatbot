@@ -1,75 +1,117 @@
-# Persona-based Conversation Simulation System for Improving Conversation Skills
+# **Angsook (앙숙)**
 
-## Dongseo University Capstone Design, Graduation Project
+---
 
-### Overview
+## **프로젝트 개요**  
+Angsook은 **페르소나 기반 대화 시뮬레이션 시스템**으로, 사용자가 상대방의 페르소나와의 대화를 통해 **자신의 대화 방식을 인식하고 개선**할 수 있도록 돕습니다. 이 시스템은 **갈등을 줄이고 인간관계를 개선**하는 데 중점을 둡니다.
 
-This project aims to enhance conversation skills through a persona-based conversation simulation system. The system is developed using a combination of modern web technologies and advanced AI-driven chatbots.
+---
 
-### Technologies Used
+### **📺 프로젝트 소개 영상**  
+[![Angsook Project Video](https://img.youtube.com/vi/4sGoxlzFsAo/0.jpg)](https://www.youtube.com/watch?v=4sGoxlzFsAo)  
+**[YouTube에서 보기](https://www.youtube.com/watch?v=4sGoxlzFsAo)**
 
-- **Frontend**: React
-- **Backend**: Flask
-- **Chatbot**: Rasa and GPT-3.5 Turbo API
+---
 
-### Training Rasa with an Empathetic Dialogue Dataset
+## **History**
+- 2024 한국컴퓨터 정보학회 하계학술대회 - **KSCI 우수논문상 수상**  
+- [📄 논문 바로가기](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11926125)
 
-I utilized the empathetic dialogue dataset from [AI Hub](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71305) to train Rasa. The training process involved preprocessing the dataset to fit our use case.
+---
 
-#### 1. Data Preprocessing
+## **시스템 구성도**
 
-The dataset was divided into different stories based on the situations described in the data.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ad547af2-c1a5-4d3c-ac0c-239591763ab8" alt="시스템 구성도" width="600"/>
+</div>
 
-#### 2. NLU and Domain Generation
+---
 
-For each situation, I created corresponding Natural Language Understanding (NLU) models and domain files. These domains were designed to recognize and respond to specific empathetic intents.
+## **시스템 아키텍처**
 
-#### 3. Empathy Categories
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/dc89f309-df3f-4b8a-aae6-a5c348537b91" alt="시스템 아키텍처" width="600"/>
+</div>
 
-The intents within each domain were categorized based on the type of empathy conveyed. Examples include:
+---
 
-- **Agreement**: Expressing concurrence with the user's feelings or opinions.
-- **Consolation**: Providing comfort and support to the user.
+## **주요 기여 및 역할**
 
-#### 4. Current Model Training
+1. **페르소나 기반 대화 설계**  
+   - **Rasa**에 AI 허브의 공감형 대화 데이터를 학습시켜 다양한 상황별 **맞춤형 대화**를 설계했습니다.
 
-The current models have been trained on a very small dataset. To improve accuracy, it is necessary to train with a larger dataset.
+2. **GPT-3.5-Turbo 파인튜닝**  
+   - **AI 허브의 페르소나 및 한국어 멀티세션 데이터**로 모델을 파인튜닝해 **한국적 특성에 맞는 자연스러운 대화**를 구현했습니다.
 
-### Fine-Tuning GPT-3.5 Turbo with Persona and Korean Multisession Dialogue Data
+3. **실시간 채팅 및 대화 이력 관리**  
+   - 실시간 채팅 시스템을 구축하고, **대화 이력을 관리해 일관된 대화 흐름**을 유지했습니다.
 
-To enhance the conversational abilities and ensure the model accurately reflects the persona characteristics, I utilized datasets from AI Hub, including the [Persona Dialogue Dataset](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71302) and the [Korean Multisession Dialogue Dataset](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71630).
+4. **음성 인식 기능 도입**  
+   - **음성 입력을 텍스트로 변환**해, AI와의 실시간 대화를 지원했습니다.
 
-#### 1. Data Preprocessing
+5. **피드백 시스템 구축**  
+   - 대화 세션 종료 후 AI에 **전체 대화 내용을 전송해 피드백**을 제공받을 수 있도록 구현했습니다.
 
-The datasets were first preprocessed to fit the requirements for fine-tuning GPT-3.5 Turbo. This involved:
+---
 
-- **Cleaning and Formatting**: Removing irrelevant data and ensuring consistency in the dialogue format.
-- **Segmentation**: Dividing the data into manageable chunks for training, ensuring each segment represented a coherent dialogue session.
+## **주요 이슈 및 해결 방법**
 
-#### 2. JSONL Conversion
+### **1. 상황 인식 문제**  
+- **문제**:  
+  초기에는 **role과 content**만 구분해 데이터를 학습한 탓에, AI가 상황을 제대로 이해하지 못하고 부자연스러운 상호작용이 발생했습니다.
 
-The preprocessed data was converted into JSONL (JSON Lines) format, which is suitable for fine-tuning with OpenAI's API.
+- **해결 방법**:  
+  - 대화 데이터를 **프롬프트와 응답(completion)**으로 분리해 학습을 개선했습니다.  
+  - 메모리 최적화를 통해 **AI가 상황을 더 명확히 인식**하도록 향상시켰습니다.
 
-#### 3. Fine-Tuning Process
+---
 
-Using OpenAI's fine-tuning tools, the prepared JSONL data was utilized to fine-tune GPT-3.5 Turbo. The process included:
+### **2. 대화 흐름 문제 및 응답 불일치**  
+- **문제**:  
+  대화가 진행될수록 **이전 대화를 기억하지 못해 일관성이 떨어지는 응답**이 발생했습니다.
 
-- **Uploading Data**: The JSONL files were uploaded to the OpenAI fine-tuning platform.
-- **Training Configuration**: Configuring the training parameters to optimize performance for Korean language understanding and persona-specific responses.
-- **Training Execution**: Running the fine-tuning process, which involved multiple epochs to iteratively improve the model's performance.
+- **해결 방법**:  
+  - **대화 히스토리 시스템**을 도입해 모든 대화 이력을 저장하고 **일관된 대화 흐름**을 유지했습니다.  
+  - 대화가 끊기지 않도록 **chat_history를 지속적으로 갱신**했습니다.
 
-#### 4. Model Evaluation
+---
 
-Post-training, the model was evaluated to ensure it accurately reflects the persona traits and can handle various conversational contexts. This involved:
+## **데이터 학습 과정**
 
-- **Testing Scenarios**: Conducting tests with different dialogue scenarios to check for naturalness and relevance.
-- **Performance Metrics**: Measuring key metrics such as response accuracy, empathy levels, and coherence in extended dialogues.
+### **1. Rasa의 공감형 대화 학습**  
+AI 허브의 [공감형 대화 데이터](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71305)를 활용해 **Rasa**를 학습했습니다.
 
-### Results and Future Improvements
+#### **데이터 처리 과정**  
+- **데이터 분류**: 상황별로 데이터를 나누고 스토리를 구성했습니다.  
+- **NLU와 도메인 파일 생성**: 각 상황에 맞는 NLU 모델과 도메인 파일을 생성해 **의도(intent)**를 인식하고 응답하도록 설계했습니다.  
+- **공감 카테고리 설정**: 의도를 공감, 위로 등으로 나누어 맞춤형 대화를 구현했습니다.
 
-The fine-tuned GPT-3.5 Turbo model has shown significant improvements in handling Korean dialogues and maintaining persona consistency. However, further enhancements can be made by:
+---
 
-- **Expanding the Dataset**: Incorporating more diverse and extensive dialogue examples.
-- **Continuous Training**: Periodically updating the model with new data to adapt to evolving conversational patterns.
+### **2. GPT-3.5-Turbo 파인튜닝 과정**  
+**AI 허브의 페르소나 및 한국어 멀티세션 대화 데이터**를 이용해 **GPT-3.5-Turbo**를 파인튜닝했습니다.
 
-By integrating Rasa and GPT-3.5 Turbo, this system aims to provide a robust platform for improving conversational skills through empathetic and persona-driven interactions.
+#### **데이터 처리 및 준비**  
+- **정리 및 포맷팅**: 불필요한 데이터를 제거하고 일관된 포맷으로 정리했습니다.  
+- **세그먼트 분할**: 대화 데이터를 작은 단위로 나누어 효율적으로 학습할 수 있도록 준비했습니다.  
+
+#### **JSONL 파일로 변환 및 업로드**  
+- 데이터를 **JSONL 포맷**으로 변환해 OpenAI 플랫폼에 업로드했습니다.  
+
+#### **파인튜닝 과정**  
+- **학습 구성**: 파인튜닝을 위해 적절한 학습 파라미터를 설정했습니다.  
+- **훈련 수행**: 여러 에포크(epoch)를 거쳐 모델 성능을 점진적으로 개선했습니다.  
+
+#### **모델 평가**  
+- **테스트 시나리오**: 다양한 대화 시나리오로 테스트해 응답의 자연스러움과 일관성을 평가했습니다.  
+- **성능 지표 측정**: 응답 정확도와 공감도, 대화 흐름 유지 능력을 평가했습니다.
+
+---
+
+## **성과 및 배운 점**
+
+1. **AI 모델의 통합과 최적화 경험**  
+   - Rasa와 GPT-3.5-Turbo를 연동해 **페르소나와 상황에 맞는 자연스러운 대화**를 구현하는 데 성공했습니다.
+
+2. **데이터 처리 및 모델 학습의 중요성**  
+   - 데이터의 정제와 적절한 포맷팅이 **모델 성능에 중요한 영향을 미친다는 점**을 배웠습니다.
